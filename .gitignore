@@ -11,3 +11,4 @@
 *.DS_Store
 node_modules/
 dist/
+test.txt

@@ -10,4 +10,4 @@
 *.swp
 *.DS_Store
 node_modules/
-Audio/
+dist/

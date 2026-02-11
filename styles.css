@@ -69,6 +69,12 @@ body{
     object-fit:cover;
 }
 
+.logo{
+    width:45px;
+    height:45px;
+    margin-right:8px;
+    align-self:center;
+}
 /* Text column grows */
 .word-text{
     display:flex;

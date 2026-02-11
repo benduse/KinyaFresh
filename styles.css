@@ -1,0 +1,130 @@
+:root{
+    --primary:#6c5ce7;
+    --bg:#f9f9fb;
+    --text:#2d3436;
+    --muted:#b2bec3;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html,body{height:100%}
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    padding-bottom:70px; /* reserve for bottom nav */
+}
+
+/* Header */
+.top-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px;
+    background:#fff;
+    box-shadow:0 2px 5px rgba(0,0,0,.05);
+    font-weight:700;
+}
+
+/* Main content centers list and is flexible */
+.content{
+    flex:1 1 auto;
+    display:flex;
+    justify-content:center;
+    padding:18px 24px;
+}
+
+/* Word container is a vertical flex column */
+#word-container{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+    max-width:720px;
+}
+
+/* Word card: use flex to align image, text and actions */
+.word-card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:#fff;
+    padding:14px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+    cursor:pointer;
+    transition:transform .12s ease;
+}
+.word-card:hover{transform:scale(1.02)}
+
+/* Image left, fixed size */
+.word-image{
+    flex:0 0 72px;
+    width:72px;
+    height:72px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+/* Text column grows */
+.word-text{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    flex:1 1 auto;
+}
+
+.word-title{font-size:1.15rem;font-weight:700}
+.word-meaning{color:var(--muted);font-size:.98rem}
+
+/* Actions aligned on right */
+.word-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-left:auto;
+}
+
+/* Audio / play button */
+.audio-indicator{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    cursor:pointer;
+    border:none;
+}
+
+/* Bottom navigation fixed with flex tabs */
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    background:#fff;
+    border-top:1px solid #eee;
+    padding:8px 0;
+    gap:0;
+}
+.nav-btn{
+    flex:1;
+    border:none;
+    background:none;
+    padding:8px 6px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:.82rem;
+    cursor:pointer;
+}
+.nav-btn.active{color:var(--primary);font-weight:700}

@@ -1,0 +1,16 @@
+[
+  {
+    "word": "Amazi",
+    "meaning": "water",
+    "example": "Nkunda kunywa amazi / I like to drink water",
+    "image": "images/water.jpeg",
+    "audio": "audio/water.m4a"
+  },
+  {
+    "word": "Imbwa",
+    "meaning": "dog",
+    "example": "Nkunda imbwa / I like dogs",
+    "image": "images/dog.jpeg",
+    "audio": "audio/dog.m4a"
+  }
+]

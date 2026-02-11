@@ -13,39 +13,23 @@ fetch('words.json')
 function showLearn() {
   container.innerHTML = '';
 
-  words.forEach(item => {
+  words.forEach((item) => {
+		const card = document.createElement("div");
+		card.className = "word-card";
 
-    const card = document.createElement('div');
-    card.className = 'word-card';
-
-    card.innerHTML = `
+		card.innerHTML = `
       <img src="${item.image}" class="word-image" alt="${item.word}">
       <div class="word-title">${item.word}</div>
       <div class="word-meaning">${item.meaning}</div>
       <div class="word-example">${item.example}</div>
-      ${item.audio ? `
-        <div class="audio-indicator">
-          🔊 <span>Listen</span>
-        </div>
-      ` : ''}
     `;
 
-    if (item.audio) {
-      const audioButton = card.querySelector('.audio-indicator');
+		// append audio controls if available
+		if (item.audio && window.createAudioControls) {
+			const controls = createAudioControls(item);
+			if (controls) card.appendChild(controls);
+		}
 
-      audioButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        if (currentAudio) {
-          currentAudio.pause();
-          currentAudio.currentTime = 0;
-        }
-
-        currentAudio = new Audio(item.audio);
-        currentAudio.play();
-      });
-    }
-
-    container.appendChild(card);
-  });
+		container.appendChild(card);
+	};);
 }

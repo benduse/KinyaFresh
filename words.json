@@ -106,10 +106,10 @@
   },
   {
     "word": "Imparage",
-    "meaning": "antelope",
-    "example": "Imparage yiruka cyane / The antelope runs very fast",
-    "image": "images/antelope.jpeg",
-    "audio": "audio/antelope.mp3"
+    "meaning": "zebra",
+    "example": "Imparage yiruka cyane / The zebra runs very fast",
+    "image": "images/zebra.jpeg",
+    "audio": "audio/zebra.mp3"
   },
   {
     "word": "Ingagi",
@@ -162,15 +162,15 @@
   },
   {
     "word": "Inzuki",
-    "meaning": "bee",
+    "meaning": "bees",
     "example": "Inzuki zitanga ubuki / Bees produce honey",
-    "image": "images/bee.jpeg",
-    "audio": "audio/bee.mp3"
+    "image": "images/bees.jpeg",
+    "audio": "audio/bees.mp3"
   },
   {
     "word": "Urutozi",
     "meaning": "ant",
-    "example": "urutozi rutwara ibiryo / The ant carries food",
+    "example": "urutozi rugira amaguru atandatu / The ant has six legs",
     "image": "images/ant.jpeg",
     "audio": "audio/ant.mp3"
   },
@@ -180,6 +180,13 @@
     "example": "Ikinyugunyugu kiguruka ku ndabyo / The butterfly flies over flowers",
     "image": "images/butterfly.jpeg",
     "audio": "audio/butterfly.mp3"
+  },
+  {
+    "word": "Indabyo",
+    "meaning": "flowers",
+    "example": "Indabyo ziri mu busitani / The flowers are in the garden",
+    "image": "images/flowers.jpeg",
+    "audio": "audio/flowers.mp3"
   },
   {
     "word": "Kuryama",

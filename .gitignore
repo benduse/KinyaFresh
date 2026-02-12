@@ -12,3 +12,7 @@
 node_modules/
 dist/
 test.txt
+convert_m4a_to_mp3.py
+*.m4a
+m4a_originals/
+moved_m4a_originals/

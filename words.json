@@ -4,293 +4,293 @@
     "meaning": "water",
     "example": "Nkunda kunywa amazi / I like to drink water",
     "image": "images/water.jpeg",
-    "audio": "audio/water.m4a"
+    "audio": "audio/water.mp3"
   },
   {
     "word": "Imbwa",
     "meaning": "dog",
     "example": "Nkunda imbwa / I like dogs",
     "image": "images/dog.jpeg",
-    "audio": "audio/dog.m4a"
+    "audio": "audio/dog.mp3"
   },
   {
     "word": "Injangwe",
     "meaning": "cat",
     "example": "Injangwe iraryama ku ntebe / The cat is sleeping on the chair",
     "image": "images/cat.jpeg",
-    "audio": "audio/cat.m4a"
+    "audio": "audio/cat.mp3"
   },
   {
     "word": "Inka",
     "meaning": "cow",
     "example": "Inka itanga amata / The cow gives milk",
     "image": "images/cow.jpeg",
-    "audio": "audio/cow.m4a"
+    "audio": "audio/cow.mp3"
   },
   {
     "word": "Ihene",
     "meaning": "goat",
     "example": "Ihene irisha mu murima / The goat is grazing in the field",
     "image": "images/goat.jpeg",
-    "audio": "audio/goat.m4a"
+    "audio": "audio/goat.mp3"
   },
   {
     "word": "Intama",
     "meaning": "sheep",
     "example": "Intama zifite ubwoya bwinshi / Sheep have a lot of wool",
     "image": "images/sheep.jpeg",
-    "audio": "audio/sheep.m4a"
+    "audio": "audio/sheep.mp3"
   },
   {
     "word": "Inkoko",
     "meaning": "chicken",
     "example": "Inkoko itera amagi / The chicken lays eggs",
     "image": "images/chicken.jpeg",
-    "audio": "audio/chicken.m4a"
+    "audio": "audio/chicken.mp3"
   },
   {
     "word": "Ifarashi",
     "meaning": "horse",
     "example": "Ifarashi yiruka vuba / The horse runs fast",
     "image": "images/horse.jpeg",
-    "audio": "audio/horse.m4a"
+    "audio": "audio/horse.mp3"
   },
   {
     "word": "Ingwe",
     "meaning": "leopard",
     "example": "Ingwe iba mu ishyamba / The leopard lives in the forest",
     "image": "images/leopard.jpeg",
-    "audio": "audio/leopard.m4a"
+    "audio": "audio/leopard.mp3"
   },
   {
     "word": "Intare",
     "meaning": "lion",
     "example": "Intare ni umwami w’ishyamba / The lion is the king of the forest",
     "image": "images/lion.jpeg",
-    "audio": "audio/lion.m4a"
+    "audio": "audio/lion.mp3"
   },
   {
     "word": "Inzovu",
     "meaning": "elephant",
     "example": "Inzovu nini cyane / The elephant is very big",
     "image": "images/elephant.jpeg",
-    "audio": "audio/elephant.m4a"
+    "audio": "audio/elephant.mp3"
   },
   {
     "word": "Imbeba",
     "meaning": "mouse",
     "example": "Imbeba irya ibiryo / The mouse eats food",
     "image": "images/mouse.jpeg",
-    "audio": "audio/mouse.m4a"
+    "audio": "audio/mouse.mp3"
   },
   {
     "word": "Urukwavu",
     "meaning": "rabbit",
     "example": "Urukwavu rusimbuka cyane / The rabbit jumps a lot",
     "image": "images/rabbit.jpeg",
-    "audio": "audio/rabbit.m4a"
+    "audio": "audio/rabbit.mp3"
   },
   {
     "word": "Impyisi",
     "meaning": "hyena",
     "example": "Impyisi iraseka nijoro / The hyena laughs at night",
     "image": "images/hyena.jpeg",
-    "audio": "audio/hyena.m4a"
+    "audio": "audio/hyena.mp3"
   },
   {
     "word": "Imbogo",
     "meaning": "buffalo",
     "example": "Imbogo iba muri pariki / The buffalo lives in the park",
     "image": "images/buffalo.jpeg",
-    "audio": "audio/buffalo.m4a"
+    "audio": "audio/buffalo.mp3"
   },
   {
     "word": "Imparage",
     "meaning": "zebra",
     "example": "Imparage yiruka cyane / The zebra runs very fast",
     "image": "images/zebra.jpeg",
-    "audio": "audio/zebra.m4a"
+    "audio": "audio/zebra.mp3"
   },
   {
     "word": "Ingagi",
     "meaning": "gorilla",
     "example": "Ingagi iba mu misozi / The gorilla lives in the mountains",
     "image": "images/gorilla.jpeg",
-    "audio": "audio/gorilla.m4a"
+    "audio": "audio/gorilla.mp3"
   },
   {
     "word": "Inkende",
     "meaning": "monkey",
     "example": "Inkende irya imineke / The monkey eats bananas",
     "image": "images/monkey.jpeg",
-    "audio": "audio/monkey.m4a"
+    "audio": "audio/monkey.mp3"
   },
   {
     "word": "Imvubu",
     "meaning": "hippopotamus",
     "example": "Imvubu iba mu mazi / The hippopotamus lives in water",
     "image": "images/hippopotamus.jpeg",
-    "audio": "audio/hippopotamus.m4a"
+    "audio": "audio/hippopotamus.mp3"
   },
   {
     "word": "Ingona",
     "meaning": "crocodile",
     "example": "Ingona iba mu ruzi / The crocodile lives in the river",
     "image": "images/crocodile.jpeg",
-    "audio": "audio/crocodile.m4a"
+    "audio": "audio/crocodile.mp3"
   },
   {
     "word": "Inyoni",
     "meaning": "bird",
     "example": "Inyoni iguruka mu kirere / The bird flies in the sky",
     "image": "images/bird.jpeg",
-    "audio": "audio/bird.m4a"
+    "audio": "audio/bird.mp3"
   },
   {
     "word": "Isake",
     "meaning": "rooster",
     "example": "Isake ibika mu gitondo / The rooster crows in the morning",
     "image": "images/rooster.jpeg",
-    "audio": "audio/rooster.m4a"
+    "audio": "audio/rooster.mp3"
   },
   {
     "word": "Imbata",
     "meaning": "duck",
     "example": "Imbata iroga mu mazi / The duck swims in the water",
     "image": "images/duck.jpeg",
-    "audio": "audio/duck.m4a"
+    "audio": "audio/duck.mp3"
   },
   {
     "word": "Inzuki",
     "meaning": "bees",
     "example": "Inzuki zitanga ubuki / Bees produce honey",
     "image": "images/bees.jpeg",
-    "audio": "audio/bees.m4a"
+    "audio": "audio/bees.mp3"
   },
   {
     "word": "Urutozi",
     "meaning": "ant",
     "example": "urutozi rugira amaguru atandatu / The ant has six legs",
     "image": "images/ant.jpeg",
-    "audio": "audio/ant.m4a"
+    "audio": "audio/ant.mp3"
   },
   {
     "word": "Ikinyugunyugu",
     "meaning": "butterfly",
     "example": "Ikinyugunyugu kiguruka ku ndabyo / The butterfly flies over flowers",
     "image": "images/butterfly.jpeg",
-    "audio": "audio/butterfly.m4a"
+    "audio": "audio/butterfly.mp3"
   },
   {
     "word": "Indabyo",
     "meaning": "flowers",
     "example": "Indabyo ziri mu busitani / The flowers are in the garden",
     "image": "images/flowers.jpeg",
-    "audio": "audio/flowers.m4a"
+    "audio": "audio/flowers.mp3"
   },
   {
     "word": "Kuryama",
     "meaning": "to lie down",
     "example": "Kuryama ku buriri / To lie down on the bed",
     "image": "images/kuryama.jpeg",
-    "audio": "audio/kuryama.m4a"
+    "audio": "audio/kuryama.mp3"
   },
   {
     "word": "Kujya",
     "meaning": "to go (frequently)",
     "example": "Kujya ku kazi buri munsi / To go to work every day",
     "image": "images/kujya.jpeg",
-    "audio": "audio/kujya.m4a"
+    "audio": "audio/kujya.mp3"
   },
   {
     "word": "Gusubira",
     "meaning": "to repeat/go back",
     "example": "Gusubira inyuma / To go back",
     "image": "images/gusubira.jpeg",
-    "audio": "audio/gusubira.m4a"
+    "audio": "audio/gusubira.mp3"
   },
   {
     "word": "Gutangira",
     "meaning": "to begin/start",
     "example": "Gutangira umushinga / To start a project",
     "image": "images/gutangira.jpeg",
-    "audio": "audio/gutangira.m4a"
+    "audio": "audio/gutangira.mp3"
   },
   {
     "word": "Kurangiza",
     "meaning": "to finish/complete",
     "example": "Kurangiza imirimo / To finish the work",
     "image": "images/kurangiza.jpeg",
-    "audio": "audio/kurangiza.m4a"
+    "audio": "audio/kurangiza.mp3"
   },
   {
     "word": "Guhagarika",
     "meaning": "to stop",
     "example": "Guhagarika imodoka / To stop the car",
     "image": "images/guhagarika.jpeg",
-    "audio": "audio/guhagarika.m4a"
+    "audio": "audio/guhagarika.mp3"
   },
   {
     "word": "Gukomeza",
     "meaning": "to continue",
     "example": "Gukomeza urugendo / To continue the journey",
     "image": "images/gukomeza.jpeg",
-    "audio": "audio/gukomeza.m4a"
+    "audio": "audio/gukomeza.mp3"
   },
   {
     "word": "Kurengera",
     "meaning": "to cross/pass",
     "example": "Kurengera umuhanda / To cross the road",
     "image": "images/kurengera.jpeg",
-    "audio": "audio/kurengera.m4a"
+    "audio": "audio/kurengera.mp3"
   },
   {
     "word": "Gusimbuka",
     "meaning": "to jump over",
     "example": "Gusimbuka urukuta / To jump over the wall",
     "image": "images/gusimbuka.jpeg",
-    "audio": "audio/gusimbuka.m4a"
+    "audio": "audio/gusimbuka.mp3"
   },
   {
     "word": "Kuzunguruka",
     "meaning": "to go around/rotate",
     "example": "Kuzunguruka umujyi / To go around the city",
     "image": "images/kuzunguruka.jpeg",
-    "audio": "audio/kuzunguruka.m4a"
+    "audio": "audio/kuzunguruka.mp3"
   },
   {
     "word": "Guhindukira",
     "meaning": "to turn",
     "example": "Guhindukira iburyo / To turn right",
     "image": "images/guhindukira.jpeg",
-    "audio": "audio/guhindukira.m4a"
+    "audio": "audio/guhindukira.mp3"
   },
   {
     "word": "Kunyura",
     "meaning": "to pass through",
     "example": "Kunyura mu murima / To pass through the field",
     "image": "images/kunyura.jpeg",
-    "audio": "audio/kunyura.m4a"
+    "audio": "audio/kunyura.mp3"
   },
   {
     "word": "Kwambuka",
     "meaning": "to cross (water)",
     "example": "Kwambuka uruzi / To cross the river",
     "image": "images/kwambuka.jpeg",
-    "audio": "audio/kwambuka.m4a"
+    "audio": "audio/kwambuka.mp3"
   },
   {
     "word": "Gutabara",
     "meaning": "to help/rescue",
     "example": "Gutabara abakene / To help the poor",
     "image": "images/gutabara.jpeg",
-    "audio": "audio/gutabara.m4a"
+    "audio": "audio/gutabara.mp3"
   },
   {
     "word": "Gufasha",
     "meaning": "to help/assist",
     "example": "Gufasha umuvandimwe / To help a sibling",
     "image": "images/gufasha.jpeg",
-    "audio": "audio/gufasha.m4a"
+    "audio": "audio/gufasha.mp3"
   }
 ]

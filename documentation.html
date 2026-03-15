@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KinyaFresh — Developer Documentation</title>
+  <style>
+    /* ── Design tokens (mirrored from styles.css) ─────────── */
+    :root {
+      --color-primary:        #5b4de0;
+      --color-primary-hover:  #4a3dbf;
+      --color-primary-tint:   #f0eeff;
+      --color-primary-border: #c4bef5;
+      --color-success:        #007a5e;
+      --color-success-bg:     #e6f7f3;
+      --color-error:          #c0392b;
+      --color-error-bg:       #fdf0ef;
+      --color-warning:        #b7510a;
+      --color-warning-bg:     #fff4ee;
+      --color-bg:             #f9f9fb;
+      --color-surface:        #ffffff;
+      --color-border:         #e0e0e6;
+      --color-text:           #1a1a2e;
+      --color-text-secondary: #595970;
+      --color-text-muted:     #767690;
+      --space-1: 4px;  --space-2: 8px;   --space-3: 12px;
+      --space-4: 16px; --space-5: 20px;  --space-6: 24px;
+      --space-8: 32px; --space-10: 40px;
+      --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+      --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font-base);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    .doc-header {
+      background: var(--color-primary);
+      color: #fff;
+      padding: var(--space-8) var(--space-6);
+      text-align: center;
+    }
+    .doc-header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -.02em; }
+    .doc-header p  { margin-top: var(--space-2); font-size: 1rem; opacity: .85; }
+    .doc-header nav { margin-top: var(--space-5); display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
+    .doc-header nav a {
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,.5);
+      border-radius: 999px;
+      padding: var(--space-1) var(--space-4);
+      font-size: .85rem;
+      font-weight: 600;
+      transition: background .15s, border-color .15s;
+    }
+    .doc-header nav a:hover { background: rgba(255,255,255,.15); border-color: #fff; }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .doc-body {
+      max-width: 820px;
+      margin: var(--space-8) auto;
+      padding: 0 var(--space-6) var(--space-10);
+    }
+
+    /* ── Section label ──────────────────────────────────────── */
+    .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--color-primary);
+      margin-bottom: var(--space-3);
+      margin-top: var(--space-8);
+    }
+
+    /* ── Accordion ──────────────────────────────────────────── */
+    .accordion { display: flex; flex-direction: column; gap: var(--space-2); }
+
+    details {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    details[open] { box-shadow: var(--shadow-md); }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) var(--space-5);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--color-text);
+      list-style: none;
+      gap: var(--space-3);
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details[open] summary::after { content: '−'; }
+
+    .summary-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      flex: 1;
+    }
+    .badge {
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px var(--space-2);
+      border-radius: 999px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge--feature  { background: var(--color-primary-tint); color: var(--color-primary); }
+    .badge--fix      { background: var(--color-success-bg);   color: var(--color-success); }
+    .badge--security { background: var(--color-error-bg);     color: var(--color-error);   }
+    .badge--style    { background: #fff8e6;                   color: #92600a;              }
+    .badge--refactor { background: #f0f0f8;                   color: var(--color-text-secondary); }
+    .badge--docs     { background: var(--color-warning-bg);   color: var(--color-warning); }
+
+    /* ── Accordion content ──────────────────────────────────── */
+    .accordion-body {
+      padding: 0 var(--space-5) var(--space-5);
+      border-top: 1px solid var(--color-border);
+      font-size: .9rem;
+      color: var(--color-text-secondary);
+    }
+    .accordion-body p  { margin-top: var(--space-3); }
+    .accordion-body ul { margin-top: var(--space-3); padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-1); }
+    .accordion-body li { line-height: 1.55; }
+
+    .accordion-body h4 {
+      margin-top: var(--space-4);
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--color-text-muted);
+    }
+
+    code {
+      font-family: 'Menlo', 'Consolas', monospace;
+      font-size: .82rem;
+      background: var(--color-primary-tint);
+      color: var(--color-primary);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    pre {
+      margin-top: var(--space-3);
+      background: #1a1a2e;
+      color: #e0e0f0;
+      padding: var(--space-4);
+      border-radius: var(--radius-sm);
+      font-size: .8rem;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .file-tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--color-text-muted);
+      margin-right: var(--space-1);
+    }
+
+    /* ── Reference links ────────────────────────────────────── */
+    .ref-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--color-primary);
+      font-size: .82rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: var(--space-3);
+    }
+    .ref-link:hover { text-decoration: underline; }
+
+    /* ── File index ─────────────────────────────────────────── */
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-3);
+      margin-top: var(--space-3);
+    }
+    .file-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      text-decoration: none;
+      color: var(--color-text);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .15s, transform .15s;
+    }
+    .file-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .file-card .file-name { font-weight: 700; font-size: .9rem; color: var(--color-primary); }
+    .file-card .file-desc { font-size: .8rem; color: var(--color-text-muted); margin-top: var(--space-1); }
+
+    @media (prefers-reduced-motion: reduce) {
+      details, summary::after, .file-card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header class="doc-header">
+  <h1>KinyaFresh — Developer Documentation</h1>
+  <p>A full record of every developmental change made to the project.</p>
+  <nav>
+    <a href="index.html">← App</a>
+    <a href="ABCs/ABCs.html">ABCs Gallery</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card" target="_blank" rel="noopener">MDN Card Cookbook ↗</a>
+    <a href="https://protocol.mozilla.org/docs/fundamentals/principles" target="_blank" rel="noopener">Mozilla Protocol ↗</a>
+  </nav>
+</header>
+
+<main class="doc-body">
+
+  <!-- ── Project files ───────────────────────────────────── -->
+  <p class="section-label">Project Files</p>
+  <div class="file-grid">
+    <a class="file-card" href="index.html">
+      <div class="file-name">index.html</div>
+      <div class="file-desc">Main app entry point</div>
+    </a>
+    <a class="file-card" href="app.js">
+      <div class="file-name">app.js</div>
+      <div class="file-desc">Card rendering &amp; puzzle logic</div>
+    </a>
+    <a class="file-card" href="audioControls.js">
+      <div class="file-name">audioControls.js</div>
+      <div class="file-desc">Standalone audio module</div>
+    </a>
+    <a class="file-card" href="styles.css">
+      <div class="file-name">styles.css</div>
+      <div class="file-desc">Design tokens &amp; layout</div>
+    </a>
+    <a class="file-card" href="words.json">
+      <div class="file-name">words.json</div>
+      <div class="file-desc">Vocabulary &amp; puzzle data</div>
+    </a>
+    <a class="file-card" href="ABCs/ABCs.html">
+      <div class="file-name">ABCs/ABCs.html</div>
+      <div class="file-desc">Image gallery page</div>
+    </a>
+    <a class="file-card" href="ABCs/ABCs.js">
+      <div class="file-name">ABCs/ABCs.js</div>
+      <div class="file-desc">Gallery navigation logic</div>
+    </a>
+    <a class="file-card" href="ABCs/ABCs.css">
+      <div class="file-name">ABCs/ABCs.css</div>
+      <div class="file-desc">Gallery styles</div>
+    </a>
+  </div>
+
+  <!-- ── Change log ──────────────────────────────────────── -->
+  <p class="section-label" style="margin-top: var(--space-10);">Change Log</p>
+  <div class="accordion">
+
+    <!-- 1 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--fix">Fix</span>
+          Broken audio routes — path casing mismatch
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>Problem</h4>
+        <p>All 42 entries in <code>words.json</code> referenced <code>audio/</code> (lowercase) but the folder on disk is <code>Audio/</code> (uppercase). On case-sensitive file systems (Linux, most servers) this silently breaks every audio file.</p>
+        <h4>Files changed</h4>
+        <ul>
+          <li><span class="file-tag">words.json</span> All <code>"audio/…"</code> paths corrected to <code>"Audio/…"</code> using a <code>sed</code> in-place replacement.</li>
+        </ul>
+        <h4>Additional finding</h4>
+        <p>Only 7 of 42 mp3 files exist in <code>/Audio</code> (water, dog, cat, cow, goat, sheep, chicken). The remaining 35 words reference mp3 files that have not yet been recorded.</p>
+      </div>
+    </details>
+
+    <!-- 2 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--feature">Feature</span>
+          MDN Card cookbook layout — one card at a time
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>The original layout rendered all 42 words as a scrollable list. This was replaced with a single-card-at-a-time view based on the <a class="ref-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card" target="_blank" rel="noopener">MDN Card Layout Cookbook ↗</a>.</p>
+        <h4>Implementation</h4>
+        <ul>
+          <li><span class="file-tag">styles.css</span> <code>.word-card</code> switched from <code>display:flex</code> to <code>display:grid</code> with <code>grid-template-rows: max-content 1fr max-content</code> — image row, body row (stretches), footer row (always pinned).</li>
+          <li><span class="file-tag">app.js</span> <code>showLearn()</code> rewritten to render only <code>words[currentIndex]</code>. Added <code>currentIndex</code> state variable, a progress counter (<code>1 / 42</code>), and a Next → / Start Over button in the card footer.</li>
+        </ul>
+        <pre>grid-template-rows: max-content 1fr max-content;</pre>
+      </div>
+    </details>
+
+    <!-- 3 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--feature">Feature</span>
+          Sentence puzzle — interactive word ordering exercise
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>Each word card gained an interactive puzzle section. The user is shown an English sentence and must tap shuffled Kinyarwanda word chips into the correct order.</p>
+        <h4>Files changed</h4>
+        <ul>
+          <li><span class="file-tag">words.json</span> Every entry gained a <code>puzzle</code> object: <code>{ "en": "…", "kiny": ["token1", "token2", …] }</code> where <code>kiny</code> is the correct token order.</li>
+          <li><span class="file-tag">app.js</span> New <code>buildPuzzle()</code> function renders the puzzle below the learn card. Chips are shuffled on every load. Tapping a chip moves it to the answer zone; tapping a placed chip returns it to the pool. Check ✓ validates order; Reset clears the answer.</li>
+          <li><span class="file-tag">styles.css</span> Added <code>.puzzle-card</code>, <code>.puzzle-answer-zone</code>, <code>.puzzle-chips</code>, <code>.chip</code>, and feedback state classes (<code>.chip--correct</code>, <code>.chip--wrong</code>).</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 4 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--security">Security</span>
+          CWE-94 &amp; CWE-79/80 — innerHTML with external data
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>Vulnerability</h4>
+        <p>The original <code>showLearn()</code> and <code>buildPuzzle()</code> used <code>innerHTML</code> template literals to inject data from <code>words.json</code> directly into the DOM. If any field contained script-like markup (e.g. <code>&lt;img src=x onerror=alert(1)&gt;</code>) it would execute — CWE-94 (code injection) and CWE-79/80 (XSS).</p>
+        <h4>Fix</h4>
+        <ul>
+          <li><span class="file-tag">app.js</span> All <code>innerHTML</code> data assignments replaced with <code>document.createElement</code> + <code>textContent</code>. A helper <code>createElement(tagName, cssClass)</code> was introduced to keep the code concise.</li>
+          <li>Container-clearing calls (<code>innerHTML = ''</code>) replaced with <code>replaceChildren()</code>, which removes child nodes via the DOM API without invoking the HTML parser.</li>
+        </ul>
+        <pre>// Before (unsafe)
+card.innerHTML = `&lt;div&gt;${item.word}&lt;/div&gt;`;
+
+// After (safe)
+const wordTitle = createElement('div', 'word-title');
+wordTitle.textContent = currentWord.word;</pre>
+        <a class="ref-link" href="https://owasp.org/www-community/attacks/Code_Injection" target="_blank" rel="noopener">OWASP Code Injection ↗</a>
+      </div>
+    </details>
+
+    <!-- 5 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--feature">Feature</span>
+          Card flip — puzzle lives on the back of the learn card
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>The puzzle was previously rendered as a separate card below the learn card. It was moved to the back face of the same card using a CSS 3D flip animation.</p>
+        <h4>Implementation</h4>
+        <ul>
+          <li><span class="file-tag">styles.css</span> Added <code>.flip-card</code> (perspective wrapper), <code>.flip-inner</code> (rotates on <code>.is-flipped</code>), and <code>.flip-face</code> / <code>.flip-front</code> / <code>.flip-back</code> with <code>backface-visibility: hidden</code>.</li>
+          <li><span class="file-tag">app.js</span> <code>showLearn()</code> wraps both faces in a single <code>.flip-card</code>. "Practice →" adds <code>.is-flipped</code>; "← Back" removes it and resets puzzle state.</li>
+        </ul>
+        <pre>.flip-card.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}</pre>
+      </div>
+    </details>
+
+    <!-- 6 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--refactor">Refactor</span>
+          Code comments — every function documented
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>All functions in <code>app.js</code> were given descriptive comments explaining their purpose, parameters, and key behaviours.</p>
+        <ul>
+          <li><code>shuffle</code> — Fisher-Yates algorithm, returns a new array</li>
+          <li><code>createElement</code> — shorthand DOM factory</li>
+          <li><code>showLearn</code> — flip-card structure, face roles, button behaviours</li>
+          <li><code>buildPuzzle</code> — <code>placed</code>/<code>shuffled</code> relationship, zone roles, <code>onBack</code> callback</li>
+          <li><code>renderChipPool</code> / <code>renderAnswerZone</code> — chip movement logic</li>
+          <li>All event handlers — what state they mutate and what side effect they trigger</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 7 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--refactor">Refactor</span>
+          Variable renaming — descriptive names throughout app.js
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>All terse or ambiguous variable names were replaced with descriptive ones. Key renames:</p>
+        <ul>
+          <li><code>r</code> → <code>response</code></li>
+          <li><code>arr</code> → <code>inputArray</code></li>
+          <li><code>a</code> → <code>shuffledCopy</code></li>
+          <li><code>i</code>, <code>j</code> (shuffle) → <code>currentPos</code>, <code>randomPos</code></li>
+          <li><code>el</code> → <code>createElement</code></li>
+          <li><code>e</code> → <code>element</code>, <code>tag</code> → <code>tagName</code>, <code>className</code> → <code>cssClass</code></li>
+          <li><code>item</code> → <code>currentWord</code></li>
+          <li><code>data</code> → <code>vocabularyData</code></li>
+          <li><code>puzzle</code> (param) → <code>puzzleData</code></li>
+          <li><code>placed</code> → <code>placedChipIndices</code></li>
+          <li><code>shuffled</code> → <code>shuffledTokens</code></li>
+          <li><code>chipsZone</code> → <code>chipPool</code></li>
+          <li><code>enDiv</code> → <code>englishSentence</code></li>
+          <li><code>feedback</code> → <code>feedbackMessage</code></li>
+          <li><code>idx</code>, <code>pos</code> → <code>chipIndex</code>, <code>placedPosition</code></li>
+          <li><code>t</code>, <code>c</code> → <code>token</code>, <code>chip</code></li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 8 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--style">Style</span>
+          Mozilla Protocol design principles applied to styles.css
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>Principles applied</h4>
+        <p>Based on the <a class="ref-link" href="https://protocol.mozilla.org/docs/fundamentals/principles" target="_blank" rel="noopener">Mozilla Protocol Design Principles ↗</a>:</p>
+        <ul>
+          <li><strong>Design for clarity</strong> — three-level type hierarchy: <code>--color-text</code>, <code>--color-text-secondary</code>, <code>--color-text-muted</code>.</li>
+          <li><strong>Design for inclusion</strong> — all text colours verified at WCAG AA (4.5:1). <code>--muted: #b2bec3</code> (2.6:1, fail) replaced with <code>#595970</code> (5.9:1, pass). Success/error colours darkened to pass AA. <code>:focus-visible</code> ring added globally. All buttons enforce <code>min-height: 44px</code>.</li>
+          <li><strong>Design with purpose</strong> — semantic token names: <code>--color-success</code>, <code>--color-error</code>, <code>--color-warning</code> with matching <code>-bg</code> variants for feedback states.</li>
+          <li><strong>Be consistent</strong> — single token set shared across <code>styles.css</code> and <code>ABCs/ABCs.css</code>. Spacing uses a 4-point scale (<code>--space-1</code> through <code>--space-6</code>).</li>
+          <li><strong>Reduce cognitive load</strong> — explicit button hierarchy: primary (filled), secondary (outlined), ghost (border only).</li>
+        </ul>
+        <h4>Tokens added</h4>
+        <pre>--color-primary-tint:   #f0eeff;
+--color-primary-border: #c4bef5;
+--color-success:        #007a5e;
+--color-error:          #c0392b;
+--color-warning:        #b7510a;</pre>
+      </div>
+    </details>
+
+    <!-- 9 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--style">Style</span>
+          Mozilla Protocol principles applied to ABCs.css
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p><code>ABCs/ABCs.css</code> was rewritten to share the same token system as <code>styles.css</code>, making both pages visually consistent.</p>
+        <ul>
+          <li>All raw hex values replaced with tokens.</li>
+          <li><code>.nav-btn</code> (gallery arrows) aligned to the same primary button style as the main app.</li>
+          <li><code>.view-toggle</code> and <code>.back-link</code> use ghost/secondary button patterns.</li>
+          <li><code>.abc-card:hover</code> uses <code>translateY(-2px)</code> + <code>box-shadow</code> elevation instead of a scale transform — less disorienting.</li>
+          <li><code>prefers-reduced-motion</code> disables all transitions.</li>
+          <li>44px touch targets enforced on all interactive elements.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 10 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--feature">Feature</span>
+          Next button added to puzzle back face
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>The puzzle back face had no way to advance to the next word without flipping back to the front first. A Next → / Start Over button was added to the puzzle footer, matching the front card's behaviour exactly.</p>
+        <ul>
+          <li><span class="file-tag">app.js</span> <code>buildPuzzle()</code> now creates a <code>nextBtn</code> in <code>puzzleFooter</code> that increments <code>currentIndex</code> and calls <code>showLearn()</code>.</li>
+          <li><span class="file-tag">app.js</span> A <code>puzzleHeader</code> was added to the back face showing the word title and progress counter, mirroring the front card's image area for structural consistency.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 11 -->
+    <details>
+      <summary>
+        <span class="summary-meta">
+          <span class="badge badge--docs">Docs</span>
+          documentation.html created
+        </span>
+      </summary>
+      <div class="accordion-body">
+        <h4>What changed</h4>
+        <p>This file. A standalone documentation page was created to record all developmental changes to the project.</p>
+        <ul>
+          <li>Uses the same design token system as <code>styles.css</code> — no external dependencies.</li>
+          <li>Native HTML <code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code> elements used for accordions — no JavaScript required.</li>
+          <li>Badges categorise each change: Feature, Fix, Security, Style, Refactor, Docs.</li>
+          <li>File index links directly to every project file.</li>
+          <li>Header nav links to the live app, ABCs gallery, MDN Card Cookbook, and Mozilla Protocol.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div><!-- /.accordion -->
+</main>
+
+</body>
+</html>

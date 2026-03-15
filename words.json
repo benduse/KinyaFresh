@@ -4,293 +4,335 @@
     "meaning": "water",
     "example": "Nkunda kunywa amazi / I like to drink water",
     "image": "images/water.jpeg",
-    "audio": "Audio/water.mp3"
+    "audio": "Audio/water.mp3",
+    "puzzle": { "en": "I like to drink water", "kiny": ["Nkunda", "kunywa", "amazi"] }
   },
   {
     "word": "Imbwa",
     "meaning": "dog",
     "example": "Nkunda imbwa / I like dogs",
     "image": "images/dog.jpeg",
-    "audio": "Audio/dog.mp3"
+    "audio": "Audio/dog.mp3",
+    "puzzle": { "en": "I like dogs", "kiny": ["Nkunda", "imbwa"] }
   },
   {
     "word": "Injangwe",
     "meaning": "cat",
     "example": "Injangwe iraryama ku ntebe / The cat is sleeping on the chair",
     "image": "images/cat.jpeg",
-    "audio": "Audio/cat.mp3"
+    "audio": "Audio/cat.mp3",
+    "puzzle": { "en": "The cat is sleeping on the chair", "kiny": ["Injangwe", "iraryama", "ku", "ntebe"] }
   },
   {
     "word": "Inka",
     "meaning": "cow",
     "example": "Inka itanga amata / The cow gives milk",
     "image": "images/cow.jpeg",
-    "audio": "Audio/cow.mp3"
+    "audio": "Audio/cow.mp3",
+    "puzzle": { "en": "The cow gives milk", "kiny": ["Inka", "itanga", "amata"] }
   },
   {
     "word": "Ihene",
     "meaning": "goat",
     "example": "Ihene irisha mu murima / The goat is grazing in the field",
     "image": "images/goat.jpeg",
-    "audio": "Audio/goat.mp3"
+    "audio": "Audio/goat.mp3",
+    "puzzle": { "en": "The goat is grazing in the field", "kiny": ["Ihene", "irisha", "mu", "murima"] }
   },
   {
     "word": "Intama",
     "meaning": "sheep",
     "example": "Intama zifite ubwoya bwinshi / Sheep have a lot of wool",
     "image": "images/sheep.jpeg",
-    "audio": "Audio/sheep.mp3"
+    "audio": "Audio/sheep.mp3",
+    "puzzle": { "en": "Sheep have a lot of wool", "kiny": ["Intama", "zifite", "ubwoya", "bwinshi"] }
   },
   {
     "word": "Inkoko",
     "meaning": "chicken",
     "example": "Inkoko itera amagi / The chicken lays eggs",
     "image": "images/chicken.jpeg",
-    "audio": "Audio/chicken.mp3"
+    "audio": "Audio/chicken.mp3",
+    "puzzle": { "en": "The chicken lays eggs", "kiny": ["Inkoko", "itera", "amagi"] }
   },
   {
     "word": "Ifarashi",
     "meaning": "horse",
     "example": "Ifarashi yiruka vuba / The horse runs fast",
     "image": "images/horse.jpeg",
-    "audio": "Audio/horse.mp3"
+    "audio": "Audio/horse.mp3",
+    "puzzle": { "en": "The horse runs fast", "kiny": ["Ifarashi", "yiruka", "vuba"] }
   },
   {
     "word": "Ingwe",
     "meaning": "leopard",
     "example": "Ingwe iba mu ishyamba / The leopard lives in the forest",
     "image": "images/leopard.jpeg",
-    "audio": "Audio/leopard.mp3"
+    "audio": "Audio/leopard.mp3",
+    "puzzle": { "en": "The leopard lives in the forest", "kiny": ["Ingwe", "iba", "mu", "ishyamba"] }
   },
   {
     "word": "Intare",
     "meaning": "lion",
-    "example": "Intare ni umwami w’ishyamba / The lion is the king of the forest",
+    "example": "Intare ni umwami w'ishyamba / The lion is the king of the forest",
     "image": "images/lion.jpeg",
-    "audio": "Audio/lion.mp3"
+    "audio": "Audio/lion.mp3",
+    "puzzle": { "en": "The lion is the king of the forest", "kiny": ["Intare", "ni", "umwami", "w'ishyamba"] }
   },
   {
     "word": "Inzovu",
     "meaning": "elephant",
     "example": "Inzovu nini cyane / The elephant is very big",
     "image": "images/elephant.jpeg",
-    "audio": "Audio/elephant.mp3"
+    "audio": "Audio/elephant.mp3",
+    "puzzle": { "en": "The elephant is very big", "kiny": ["Inzovu", "nini", "cyane"] }
   },
   {
     "word": "Imbeba",
     "meaning": "mouse",
     "example": "Imbeba irya ibiryo / The mouse eats food",
     "image": "images/mouse.jpeg",
-    "audio": "Audio/mouse.mp3"
+    "audio": "Audio/mouse.mp3",
+    "puzzle": { "en": "The mouse eats food", "kiny": ["Imbeba", "irya", "ibiryo"] }
   },
   {
     "word": "Urukwavu",
     "meaning": "rabbit",
     "example": "Urukwavu rusimbuka cyane / The rabbit jumps a lot",
     "image": "images/rabbit.jpeg",
-    "audio": "Audio/rabbit.mp3"
+    "audio": "Audio/rabbit.mp3",
+    "puzzle": { "en": "The rabbit jumps a lot", "kiny": ["Urukwavu", "rusimbuka", "cyane"] }
   },
   {
     "word": "Impyisi",
     "meaning": "hyena",
     "example": "Impyisi iraseka nijoro / The hyena laughs at night",
     "image": "images/hyena.jpeg",
-    "audio": "Audio/hyena.mp3"
+    "audio": "Audio/hyena.mp3",
+    "puzzle": { "en": "The hyena laughs at night", "kiny": ["Impyisi", "iraseka", "nijoro"] }
   },
   {
     "word": "Imbogo",
     "meaning": "buffalo",
     "example": "Imbogo iba muri pariki / The buffalo lives in the park",
     "image": "images/buffalo.jpeg",
-    "audio": "Audio/buffalo.mp3"
+    "audio": "Audio/buffalo.mp3",
+    "puzzle": { "en": "The buffalo lives in the park", "kiny": ["Imbogo", "iba", "muri", "pariki"] }
   },
   {
     "word": "Imparage",
     "meaning": "zebra",
     "example": "Imparage yiruka cyane / The zebra runs very fast",
     "image": "images/zebra.jpeg",
-    "audio": "Audio/zebra.mp3"
+    "audio": "Audio/zebra.mp3",
+    "puzzle": { "en": "The zebra runs very fast", "kiny": ["Imparage", "yiruka", "cyane"] }
   },
   {
     "word": "Ingagi",
     "meaning": "gorilla",
     "example": "Ingagi iba mu misozi / The gorilla lives in the mountains",
     "image": "images/gorilla.jpeg",
-    "audio": "Audio/gorilla.mp3"
+    "audio": "Audio/gorilla.mp3",
+    "puzzle": { "en": "The gorilla lives in the mountains", "kiny": ["Ingagi", "iba", "mu", "misozi"] }
   },
   {
     "word": "Inkende",
     "meaning": "monkey",
     "example": "Inkende irya imineke / The monkey eats bananas",
     "image": "images/monkey.jpeg",
-    "audio": "Audio/monkey.mp3"
+    "audio": "Audio/monkey.mp3",
+    "puzzle": { "en": "The monkey eats bananas", "kiny": ["Inkende", "irya", "imineke"] }
   },
   {
     "word": "Imvubu",
     "meaning": "hippopotamus",
     "example": "Imvubu iba mu mazi / The hippopotamus lives in water",
     "image": "images/hippopotamus.jpeg",
-    "audio": "Audio/hippopotamus.mp3"
+    "audio": "Audio/hippopotamus.mp3",
+    "puzzle": { "en": "The hippopotamus lives in water", "kiny": ["Imvubu", "iba", "mu", "mazi"] }
   },
   {
     "word": "Ingona",
     "meaning": "crocodile",
     "example": "Ingona iba mu ruzi / The crocodile lives in the river",
     "image": "images/crocodile.jpeg",
-    "audio": "Audio/crocodile.mp3"
+    "audio": "Audio/crocodile.mp3",
+    "puzzle": { "en": "The crocodile lives in the river", "kiny": ["Ingona", "iba", "mu", "ruzi"] }
   },
   {
     "word": "Inyoni",
     "meaning": "bird",
     "example": "Inyoni iguruka mu kirere / The bird flies in the sky",
     "image": "images/bird.jpeg",
-    "audio": "Audio/bird.mp3"
+    "audio": "Audio/bird.mp3",
+    "puzzle": { "en": "The bird flies in the sky", "kiny": ["Inyoni", "iguruka", "mu", "kirere"] }
   },
   {
     "word": "Isake",
     "meaning": "rooster",
     "example": "Isake ibika mu gitondo / The rooster crows in the morning",
     "image": "images/rooster.jpeg",
-    "audio": "Audio/rooster.mp3"
+    "audio": "Audio/rooster.mp3",
+    "puzzle": { "en": "The rooster crows in the morning", "kiny": ["Isake", "ibika", "mu", "gitondo"] }
   },
   {
     "word": "Imbata",
     "meaning": "duck",
     "example": "Imbata iroga mu mazi / The duck swims in the water",
     "image": "images/duck.jpeg",
-    "audio": "Audio/duck.mp3"
+    "audio": "Audio/duck.mp3",
+    "puzzle": { "en": "The duck swims in the water", "kiny": ["Imbata", "iroga", "mu", "mazi"] }
   },
   {
     "word": "Inzuki",
     "meaning": "bees",
     "example": "Inzuki zitanga ubuki / Bees produce honey",
     "image": "images/bees.jpeg",
-    "audio": "Audio/bees.mp3"
+    "audio": "Audio/bees.mp3",
+    "puzzle": { "en": "Bees produce honey", "kiny": ["Inzuki", "zitanga", "ubuki"] }
   },
   {
     "word": "Urutozi",
     "meaning": "ant",
     "example": "urutozi rugira amaguru atandatu / The ant has six legs",
     "image": "images/ant.jpeg",
-    "audio": "Audio/ant.mp3"
+    "audio": "Audio/ant.mp3",
+    "puzzle": { "en": "The ant has six legs", "kiny": ["Urutozi", "rugira", "amaguru", "atandatu"] }
   },
   {
     "word": "Ikinyugunyugu",
     "meaning": "butterfly",
     "example": "Ikinyugunyugu kiguruka ku ndabyo / The butterfly flies over flowers",
     "image": "images/butterfly.jpeg",
-    "audio": "Audio/butterfly.mp3"
+    "audio": "Audio/butterfly.mp3",
+    "puzzle": { "en": "The butterfly flies over flowers", "kiny": ["Ikinyugunyugu", "kiguruka", "ku", "ndabyo"] }
   },
   {
     "word": "Indabyo",
     "meaning": "flowers",
     "example": "Indabyo ziri mu busitani / The flowers are in the garden",
     "image": "images/flowers.jpeg",
-    "audio": "Audio/flowers.mp3"
+    "audio": "Audio/flowers.mp3",
+    "puzzle": { "en": "The flowers are in the garden", "kiny": ["Indabyo", "ziri", "mu", "busitani"] }
   },
   {
     "word": "Kuryama",
     "meaning": "to lie down",
     "example": "Kuryama ku buriri / To lie down on the bed",
     "image": "images/kuryama.jpeg",
-    "audio": "Audio/kuryama.mp3"
+    "audio": "Audio/kuryama.mp3",
+    "puzzle": { "en": "To lie down on the bed", "kiny": ["Kuryama", "ku", "buriri"] }
   },
   {
     "word": "Kujya",
     "meaning": "to go (frequently)",
     "example": "Kujya ku kazi buri munsi / To go to work every day",
     "image": "images/kujya.jpeg",
-    "audio": "Audio/kujya.mp3"
+    "audio": "Audio/kujya.mp3",
+    "puzzle": { "en": "To go to work every day", "kiny": ["Kujya", "ku", "kazi", "buri", "munsi"] }
   },
   {
     "word": "Gusubira",
     "meaning": "to repeat/go back",
     "example": "Gusubira inyuma / To go back",
     "image": "images/gusubira.jpeg",
-    "audio": "Audio/gusubira.mp3"
+    "audio": "Audio/gusubira.mp3",
+    "puzzle": { "en": "To go back", "kiny": ["Gusubira", "inyuma"] }
   },
   {
     "word": "Gutangira",
     "meaning": "to begin/start",
     "example": "Gutangira umushinga / To start a project",
     "image": "images/gutangira.jpeg",
-    "audio": "Audio/gutangira.mp3"
+    "audio": "Audio/gutangira.mp3",
+    "puzzle": { "en": "To start a project", "kiny": ["Gutangira", "umushinga"] }
   },
   {
     "word": "Kurangiza",
     "meaning": "to finish/complete",
     "example": "Kurangiza imirimo / To finish the work",
     "image": "images/kurangiza.jpeg",
-    "audio": "Audio/kurangiza.mp3"
+    "audio": "Audio/kurangiza.mp3",
+    "puzzle": { "en": "To finish the work", "kiny": ["Kurangiza", "imirimo"] }
   },
   {
     "word": "Guhagarika",
     "meaning": "to stop",
     "example": "Guhagarika imodoka / To stop the car",
     "image": "images/guhagarika.jpeg",
-    "audio": "Audio/guhagarika.mp3"
+    "audio": "Audio/guhagarika.mp3",
+    "puzzle": { "en": "To stop the car", "kiny": ["Guhagarika", "imodoka"] }
   },
   {
     "word": "Gukomeza",
     "meaning": "to continue",
     "example": "Gukomeza urugendo / To continue the journey",
     "image": "images/gukomeza.jpeg",
-    "audio": "Audio/gukomeza.mp3"
+    "audio": "Audio/gukomeza.mp3",
+    "puzzle": { "en": "To continue the journey", "kiny": ["Gukomeza", "urugendo"] }
   },
   {
     "word": "Kurengera",
     "meaning": "to cross/pass",
     "example": "Kurengera umuhanda / To cross the road",
     "image": "images/kurengera.jpeg",
-    "audio": "Audio/kurengera.mp3"
+    "audio": "Audio/kurengera.mp3",
+    "puzzle": { "en": "To cross the road", "kiny": ["Kurengera", "umuhanda"] }
   },
   {
     "word": "Gusimbuka",
     "meaning": "to jump over",
     "example": "Gusimbuka urukuta / To jump over the wall",
     "image": "images/gusimbuka.jpeg",
-    "audio": "Audio/gusimbuka.mp3"
+    "audio": "Audio/gusimbuka.mp3",
+    "puzzle": { "en": "To jump over the wall", "kiny": ["Gusimbuka", "urukuta"] }
   },
   {
     "word": "Kuzunguruka",
     "meaning": "to go around/rotate",
     "example": "Kuzunguruka umujyi / To go around the city",
     "image": "images/kuzunguruka.jpeg",
-    "audio": "Audio/kuzunguruka.mp3"
+    "audio": "Audio/kuzunguruka.mp3",
+    "puzzle": { "en": "To go around the city", "kiny": ["Kuzunguruka", "umujyi"] }
   },
   {
     "word": "Guhindukira",
     "meaning": "to turn",
     "example": "Guhindukira iburyo / To turn right",
     "image": "images/guhindukira.jpeg",
-    "audio": "Audio/guhindukira.mp3"
+    "audio": "Audio/guhindukira.mp3",
+    "puzzle": { "en": "To turn right", "kiny": ["Guhindukira", "iburyo"] }
   },
   {
     "word": "Kunyura",
     "meaning": "to pass through",
     "example": "Kunyura mu murima / To pass through the field",
     "image": "images/kunyura.jpeg",
-    "audio": "Audio/kunyura.mp3"
+    "audio": "Audio/kunyura.mp3",
+    "puzzle": { "en": "To pass through the field", "kiny": ["Kunyura", "mu", "murima"] }
   },
   {
     "word": "Kwambuka",
     "meaning": "to cross (water)",
     "example": "Kwambuka uruzi / To cross the river",
     "image": "images/kwambuka.jpeg",
-    "audio": "Audio/kwambuka.mp3"
+    "audio": "Audio/kwambuka.mp3",
+    "puzzle": { "en": "To cross the river", "kiny": ["Kwambuka", "uruzi"] }
   },
   {
     "word": "Gutabara",
     "meaning": "to help/rescue",
     "example": "Gutabara abakene / To help the poor",
     "image": "images/gutabara.jpeg",
-    "audio": "Audio/gutabara.mp3"
+    "audio": "Audio/gutabara.mp3",
+    "puzzle": { "en": "To help the poor", "kiny": ["Gutabara", "abakene"] }
   },
   {
     "word": "Gufasha",
     "meaning": "to help/assist",
     "example": "Gufasha umuvandimwe / To help a sibling",
     "image": "images/gufasha.jpeg",
-    "audio": "Audio/gufasha.mp3"
+    "audio": "Audio/gufasha.mp3",
+    "puzzle": { "en": "To help a sibling", "kiny": ["Gufasha", "umuvandimwe"] }
   }
 ]

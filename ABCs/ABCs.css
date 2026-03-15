@@ -1,23 +1,166 @@
-:root{--bg:#f9f9fb;--card:#fff;--muted:#6b7280;--accent:#6c5ce7}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto;min-height:100vh;background:var(--bg);color:#111}
-.abc-header{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid #eee;background:#fff}
-.back-link{color:var(--muted);text-decoration:none;font-size:.95rem}
-.abc-title{font-size:1.05rem;font-weight:700;margin:0 auto}
-.view-toggle{background:transparent;border:1px solid #e6e6e6;padding:6px 10px;border-radius:8px;cursor:pointer}
+/* Inherits the same token system defined in styles.css.
+   Tokens are redeclared here so ABCs.html works as a standalone page. */
+:root {
+  --color-primary:        #5b4de0;
+  --color-primary-hover:  #4a3dbf;
+  --color-bg:             #f9f9fb;
+  --color-surface:        #ffffff;
+  --color-border:         #e0e0e6;
+  --color-text:           #1a1a2e;
+  --color-text-secondary: #595970;
+  --color-text-muted:     #767690;
+  --shadow-sm:            0 1px 4px rgba(0,0,0,.06);
+  --shadow-md:            0 4px 16px rgba(0,0,0,.08);
+  --radius-sm:            8px;
+  --radius-md:            12px;
+  --radius-lg:            16px;
+  --radius-pill:          999px;
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+  --space-4: 16px; --space-5: 20px; --space-6: 24px;
+  --touch-target: 44px;
+  --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
-/* single view */
-.single-view{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px;max-width:960px;margin:18px auto;position:relative}
-.single-view img{max-width:80vw;max-height:70vh;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.12)}
-.nav-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 14px;cursor:pointer;font-size:18px}
-.caption{text-align:center;color:var(--muted);margin-top:8px;width:100%}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font-base);
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
 
-/* grid */
-.abc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;max-width:960px;margin:0 auto;padding:0 16px 36px}
-.abc-card{background:var(--card);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 1px 4px rgba(0,0,0,.04);cursor:pointer}
-.abc-card img{width:100%;height:100%;object-fit:contain;max-height:140px;display:block}
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
 
-/* helpers */
-.hidden{display:none}
-@media (max-width:420px){.single-view img{max-width:92vw;max-height:60vh}.abc-grid{grid-template-columns:repeat(2,1fr)}}
+/* ── Header ──────────────────────────────────────────────── */
+.abc-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.back-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: .95rem;
+  min-height: var(--touch-target);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: color .15s;
+}
+.back-link:hover { color: var(--color-primary); }
+
+.abc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 auto;
+  color: var(--color-text);
+}
+
+.view-toggle {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-family: var(--font-base);
+  transition: border-color .15s, color .15s;
+}
+.view-toggle:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ── Single image view ───────────────────────────────────── */
+.single-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  max-width: 960px;
+  margin: var(--space-5) auto;
+  position: relative;
+}
+.single-view img {
+  max-width: 80vw;
+  max-height: 70vh;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+.caption {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  width: 100%;
+  font-size: .9rem;
+}
+
+/* Nav arrows — same primary button style as main app */
+.nav-btn {
+  min-height: var(--touch-target);
+  min-width: var(--touch-target);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s;
+}
+.nav-btn:hover { background: var(--color-primary-hover); }
+
+/* ── Grid view ───────────────────────────────────────────── */
+.abc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-6);
+}
+.abc-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: box-shadow .15s, transform .15s;
+}
+.abc-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.abc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 140px;
+  display: block;
+}
+
+/* ── Utility ─────────────────────────────────────────────── */
+.hidden { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .abc-card, .nav-btn, .view-toggle, .back-link { transition: none; }
+}
+
+@media (max-width: 420px) {
+  .single-view img { max-width: 92vw; max-height: 60vh; }
+  .abc-grid { grid-template-columns: repeat(2, 1fr); }
+}
